@@ -7,7 +7,7 @@ namespace Ejercicios
     {
         public static void Main()
         {
-            const string PRIME = "Introdueix un número natural";
+            const string PRIME = "Introdueix un número natural:";
             const string NATURAL = "El número és natural";
             const string NONATURAL = "El número no és natural";
             const string ERROR = "Error de programa";
