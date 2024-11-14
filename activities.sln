@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "activities", "activities.csproj", "{143C8D54-E656-46BA-86CD-6FDCAAD3A8F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaEjercicios", "..\LibreriaEjercicios\LibreriaEjercicios.csproj", "{9C1F9A9C-AF82-4602-A4C3-4CEF6A39AC7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{143C8D54-E656-46BA-86CD-6FDCAAD3A8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{143C8D54-E656-46BA-86CD-6FDCAAD3A8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{143C8D54-E656-46BA-86CD-6FDCAAD3A8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1F9A9C-AF82-4602-A4C3-4CEF6A39AC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1F9A9C-AF82-4602-A4C3-4CEF6A39AC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1F9A9C-AF82-4602-A4C3-4CEF6A39AC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1F9A9C-AF82-4602-A4C3-4CEF6A39AC7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
