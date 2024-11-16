@@ -1,30 +1,28 @@
 ﻿using System;
 using LibreriaEjercicios;
-//Pre: L'usuari ha d'introduir números naturals
-namespace Ejercicios
+//Pre: L'usuari ha de introduir números enters
+namespace MyProject
 {
-    public class ValidPosNoCeien //Ej 4, valida si un nombre és positiu i menor que 100
+    public class ValidNaturalTresTried //Ej 5, Valida que numero introducido por teclado sea natural, solo con tres intentos 
     {
+        
         public static void Main()
         {
-            const string PRIME = "Introdueix un número positiu:";
-            const string POS = "El número introduït és positiu i menor que 100";
-            const string NOTPOS = "El número introduït és negatiu o més gran o igual que 100";
+            const string NAT = "El número introduït és natural";
+            const string NONAT = "El número introduït no ésnatural i t'has quedat sense intents";
             const string ERROR = "Error de programa";
-            int num;
-            bool neg = false;
+            int num = 0, intent = 0;
+            bool nat = false;
             try
             {
-                Console.WriteLine(PRIME);
-                num = Convert.ToInt32(Console.ReadLine());
-                neg = Libreria.ValidPosAndNoCien(num);
-                if (neg == false)
+                nat = Libreria.ValidNaturalTries(num, ref intent);
+                if (nat == false)
                 {
-                    Console.WriteLine(NOTPOS);
+                    Console.WriteLine(NONAT);
                 }
                 else
                 {
-                    Console.WriteLine(POS);
+                    Console.WriteLine(NAT);
                 }
             }
             catch (Exception)
@@ -34,4 +32,4 @@ namespace Ejercicios
         }
     }
 }
-//El programa indica si el número introduït és negatiu o més gran o igual que 100
+//El programa indica si en 3 intents el número introduït és natural o no 
