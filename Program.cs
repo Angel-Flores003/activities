@@ -3,14 +3,13 @@ using LibreriaEjercicios;
 //Pre: L'usuari ha d'introduir números naturals
 namespace Ejercicios
 {
-    public class Secondthree//Ej 3, Valida si un nombre és negatiu
+    public class ValidPosNoCeien //Ej 4, valida si un nombre és positiu i menor que 100
     {
-
         public static void Main()
         {
-            const string PRIME = "Introdueix Un número negatiu:";
-            const string NEG = "El número introduït és negatiu";
-            const string NOTNEG = "El número introduït no és negatiu";
+            const string PRIME = "Introdueix un número positiu:";
+            const string POS = "El número introduït és positiu i menor que 100";
+            const string NOTPOS = "El número introduït és negatiu o més gran o igual que 100";
             const string ERROR = "Error de programa";
             int num;
             bool neg = false;
@@ -18,14 +17,14 @@ namespace Ejercicios
             {
                 Console.WriteLine(PRIME);
                 num = Convert.ToInt32(Console.ReadLine());
-                neg = Libreria.ValidNeg(num);
+                neg = Libreria.ValidPosAndNoCien(num);
                 if (neg == false)
                 {
-                    Console.WriteLine(NOTNEG);
+                    Console.WriteLine(NOTPOS);
                 }
                 else
                 {
-                    Console.WriteLine(NEG);
+                    Console.WriteLine(POS);
                 }
             }
             catch (Exception)
@@ -35,4 +34,4 @@ namespace Ejercicios
         }
     }
 }
-//Post: El programa indica si el número introduït és negatiu o no
+//El programa indica si el número introduït és negatiu o més gran o igual que 100
