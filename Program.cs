@@ -3,33 +3,30 @@ using LibreriaEjercicios;
 //Pre: L'usuari ha de un número natural
 namespace MyProject
 {
-    public class CalculSumaParellSenar //Ej 9, donat un nombre introduït per teclat calcula quants digits té, suma els dígits amb valor parell i senars
-
+    public class ValidTraspas //Ej 10, demana l’any i aquest retorna si és un any de traspàs
     {
-
-
+        
         public static void Main()
         {
-            const string PRIME = "Introdueix un número: ";
-            const string QUANTITAT = "El número introduït té ";
-            const string XIFRA = " xifres";
-            const string SUMAPARELLS = "El sumatori dels dígits parells és: ";
-            const string SUMASENARS = "El sumatori dels dígits senars és: ";
+            const string PRIME = "Introdueix l'any: ";
+            const string ANYTRAS = "L'any introduït és un any de traspas";
+            const string ANYNORM = "L'any introduït no és un any de transpas";
             const string ERROR = "Error de programa";
-            int num, quantitat = 0, parell = 0, senar = 0, residu = 0;
+            int any;
+            bool tras = false;
             try
             {
                 Console.WriteLine(PRIME);
-                num = Convert.ToInt32(Console.ReadLine());
-                Libreria.Count(num, ref quantitat, ref parell, ref senar, ref residu);
-                Console.Write(QUANTITAT);
-                Console.Write(quantitat);
-                Console.WriteLine(XIFRA);
-                Console.WriteLine(SUMAPARELLS);
-                Console.WriteLine(parell);
-                Console.WriteLine(SUMASENARS);
-                Console.WriteLine(senar);
-
+                any = Convert.ToInt32(Console.ReadLine());
+                tras = Libreria.Trasp(any);
+                if (tras == false)
+                {
+                    Console.WriteLine(ANYNORM);
+                }
+                else
+                {
+                    Console.WriteLine(ANYTRAS);
+                }
             }
             catch (Exception)
             {
@@ -38,4 +35,4 @@ namespace MyProject
         }
     }
 }
-//El programa retorna la quantita de xifres que té el número introduit i el sumatori de les xifres parrelles i senars
+//El programa retorna si l'any introduït es de traspas o no
