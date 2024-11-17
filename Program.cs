@@ -1,38 +1,31 @@
 ﻿using System;
 using LibreriaEjercicios;
-//Pre: L'usuari ha de un número natural
+//Pre: L'usuari ha d'introduir números naturals
 namespace MyProject
 {
-    public class ValidTraspas //Ej 10, demana l’any i aquest retorna si és un any de traspàs
+    public class IntroMulti //Ej 11, demana a l’usuari quants valors vol introduir entre (15, 100), de manera que el programa generi una llista a partir de valors introduïts i retorna la multiplicaci´´o d'aquets
     {
-        
         public static void Main()
         {
-            const string PRIME = "Introdueix l'any: ";
-            const string ANYTRAS = "L'any introduït és un any de traspas";
-            const string ANYNORM = "L'any introduït no és un any de transpas";
-            const string ERROR = "Error de programa";
-            int any;
-            bool tras = false;
+            const string NUM = "Quants números naturals vols introduïr? ";
+            const string RANG = "Introdueix un número entre 15 i 100: ";
+            const string RESULT = "El resultat de la multiplicació és: ";
+            const string Error = "Error de programa";
+            int num = 0, producte = 1;
             try
             {
-                Console.WriteLine(PRIME);
-                any = Convert.ToInt32(Console.ReadLine());
-                tras = Libreria.Trasp(any);
-                if (tras == false)
-                {
-                    Console.WriteLine(ANYNORM);
-                }
-                else
-                {
-                    Console.WriteLine(ANYTRAS);
-                }
+                Libreria.ValidNat(NUM, ref num);
+                int[] quantitat = new int[num];
+                Libreria.Quantitat(num, quantitat, RANG);
+                Console.WriteLine(RESULT);
+                Libreria.Producte(ref producte, num, quantitat);
+                Console.WriteLine(producte);
             }
             catch (Exception)
             {
-                Console.WriteLine(ERROR);
+                Console.WriteLine(Error);
             }
         }
     }
 }
-//El programa retorna si l'any introduït es de traspas o no
+//El programa retorna la mul3ltimplicació dels números introduïts per teclat
