@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using LibreriaEjercicios;
 //Pre: L'usuari ha d'introduir números naturals
 namespace MyProject
@@ -17,7 +17,7 @@ namespace MyProject
                 Libreria.ChangeSeconds(ref num);
                 Console.WriteLine(num + " segons");
             }
-            catch (Exception)
+            catch (FormatException)
             {
                 Console.WriteLine(Error);
             }
