@@ -8,6 +8,7 @@ namespace MyProject
         public static void Main()
         {
             const string PRIME = "Intropdueix un número per fer la conversió ";
+            const string Fahrenheit = "Els graus passats a Fahrenheit són: ";
             const string Error = "Error de programa";
             double num;
             try
@@ -15,7 +16,8 @@ namespace MyProject
                 Console.WriteLine(PRIME);
                 num = Convert.ToInt32(Console.ReadLine());
                 Libreria.ChangeGraus(ref num);
-                Console.WriteLine(num);
+                Console.WriteLine(Fahrenheit);
+                Console.WriteLine(num + "ºF");
             }
             catch (Exception)
             {
