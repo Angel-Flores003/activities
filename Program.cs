@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using LibreriaEjercicios;
 //Pre: L'usuari ha d'introduir números naturals
 namespace MyProject
@@ -19,11 +19,11 @@ namespace MyProject
                 Console.WriteLine(Fahrenheit);
                 Console.WriteLine(num + "ºF");
             }
-            catch (Exception)
+            catch (FormatException)
             {
                 Console.WriteLine(Error);
             }
         }
     }
 }
-//El programa retorna la conversió dels graus de (CC) a (FF)
+//El programa retorna la mul3ltimplicació dels números introduïts per teclat
