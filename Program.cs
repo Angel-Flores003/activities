@@ -3,25 +3,23 @@ using LibreriaEjercicios;
 //Pre: L'usuari ha d'introduir números naturals
 namespace MyProject
 {
-    public class IntroMulti //Ej 14, retorna el màxim i mínim de dos valors enters introduïts per tecla
+    public class IntroMulti //Ej 11, demana a l’usuari quants valors vol introduir entre (15, 100), de manera que el programa generi una llista a partir de valors introduïts i retorna la multiplicaci´´o d'aquets
     {
         public static void Main()
         {
-            const string PRIME = "Intropdueix el primer número per fer la comparació ";
-            const string OTHER = "Introdueix l'altre número";
-            const string MAX = "El valor màxim és: ";
-            const string MIN = "El valor mínim és: ";
+            const string NUM = "Quants números naturals vols introduïr? ";
+            const string RANG = "Introdueix un número entre 15 i 100: ";
+            const string RESULT = "El resultat de la multiplicació és: ";
             const string Error = "Error de programa";
-            int num1, num2;
+            int num = 0, producte = 1;
             try
             {
-                Console.WriteLine(PRIME);
-                num1 = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(OTHER);
-                num2= Convert.ToInt32(Console.ReadLine());
-                Libreria.MaxAndMin(ref num1, ref num2);
-                Console.WriteLine(MAX + num1);
-                Console.WriteLine(MIN + num2);
+                Libreria.ValidNat(NUM, ref num);
+                int[] quantitat = new int[num];
+                Libreria.Quantitat(num, quantitat, RANG);
+                Console.WriteLine(RESULT);
+                Libreria.Producte(ref producte, num, quantitat);
+                Console.WriteLine(producte);
             }
             catch (Exception)
             {
@@ -30,4 +28,4 @@ namespace MyProject
         }
     }
 }
-//El programa retorna el valor màxim i el mínim de dos valors introduïts per teclat
+//El programa retorna la mul3ltimplicació dels números introduïts per teclat
