@@ -1,27 +1,25 @@
-﻿using System;
+using System;
 using LibreriaEjercicios;
 //Pre: L'usuari ha d'introduir números naturals
 namespace MyProject
 {
-    public class IntroMulti //Ej 11, demana a l’usuari quants valors vol introduir entre (15, 100), de manera que el programa generi una llista a partir de valors introduïts i retorna la multiplicaci´´o d'aquets
+    public class IntroMulti //Ej 12,  llegeix graus en escala Celsius (CC) i els converteix en graus en escala Fahrenheit (FF)
     {
         public static void Main()
         {
-            const string NUM = "Quants números naturals vols introduïr? ";
-            const string RANG = "Introdueix un número entre 15 i 100: ";
-            const string RESULT = "El resultat de la multiplicació és: ";
+            const string PRIME = "Intropdueix un número per fer la conversió ";
+            const string Fahrenheit = "Els graus passats a Fahrenheit són: ";
             const string Error = "Error de programa";
-            int num = 0, producte = 1;
+            double num;
             try
             {
-                Libreria.ValidNat(NUM, ref num);
-                int[] quantitat = new int[num];
-                Libreria.Quantitat(num, quantitat, RANG);
-                Console.WriteLine(RESULT);
-                Libreria.Producte(ref producte, num, quantitat);
-                Console.WriteLine(producte);
+                Console.WriteLine(PRIME);
+                num = Convert.ToInt32(Console.ReadLine());
+                Libreria.ChangeGraus(ref num);
+                Console.WriteLine(Fahrenheit);
+                Console.WriteLine(num + "ºF");
             }
-            catch (Exception)
+            catch (FormatException)
             {
                 Console.WriteLine(Error);
             }
